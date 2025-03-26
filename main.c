@@ -52,10 +52,10 @@ int main() {
 
             case 3:
                 printf("\nInformación del producto:\n");
-                printf("ID: \t%d\n", id);
-                printf("Nombre: \t%s", nombre);
-                printf("Stock disponible: \t%d\n", stock);
-                printf("Precio unitario: \t%.2f\n", precio);
+                printf("ID:\t\t\t%d\n", id);                  
+                printf("Nombre:\t\t\t%s", nombre);          
+                printf("Stock disponible:\t%d\n", stock);    
+                printf("Precio unitario:\t%.2f\n", precio);  
                 break;
 
             case 4:
@@ -63,6 +63,7 @@ int main() {
                 break;
 
             case 5:
+                printf("\n");
                 printf("Saliendo del programa...\n");
                 break;
 
