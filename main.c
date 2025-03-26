@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <string.h>
+void limpiarbuffer(){
+     // Limpiar el Buffer
+     int c;
+     while ((c = getchar()) != '\n' && c != EOF);
+}
 
 int main() {
     int id, stock, cantidad, opcion;
@@ -10,6 +15,7 @@ int main() {
     printf("Ingrese el ID del producto: ");
     scanf("%d", &id);
     
+    limpiarbuffer();
     printf("Ingrese el nombre del producto: ");
     fgets(nombre, 30, stdin);
     
@@ -46,10 +52,10 @@ int main() {
 
             case 3:
                 printf("\nInformación del producto:\n");
-                printf("ID: %d\n", id);
-                printf("Nombre: %s", nombre);
-                printf("Stock disponible: %d\n", stock);
-                printf("Precio unitario: %.2f\n", precio);
+                printf("ID: \t%d\n", id);
+                printf("Nombre: \t%s", nombre);
+                printf("Stock disponible: \t%d\n", stock);
+                printf("Precio unitario: \t%.2f\n", precio);
                 break;
 
             case 4:
