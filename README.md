@@ -1,7 +1,7 @@
 # EJERCICIO DE PROGRAMACIÓN
 
 ## Integrantes
-Isaac Benítez
+Isaac Benítez - 
 Mathías Castillo
 
 ## INDICACIONES 
