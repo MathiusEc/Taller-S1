@@ -1,5 +1,9 @@
 # EJERCICIO DE PROGRAMACIÓN
 
+## Integrantes
+Isaac Benítez - 
+Mathías Castillo
+
 ## INDICACIONES 
 Un pequeño comerciante necesita un programa en C para gestionar la venta de un único producto en su tienda. El programa debe permitirle:
 * Registrar los datos del producto: ID, nombre, cantidad en stock y precio unitario.
