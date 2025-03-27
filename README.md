@@ -1,6 +1,6 @@
 # EJERCICIO DE PROGRAMACIÓN
 
-##Integrantes
+## Integrantes
 Isaac Benítez
 Mathías Castillo
 
