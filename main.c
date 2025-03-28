@@ -4,7 +4,7 @@
 int main() {
     int val;
     int stock=-1, cantidad, opcion;
-    float precio, total_ganancias = 0, venta=0;
+    float precio, total_ganancias = 0, venta=0, descuento;
     char nombre[30];
     char id[10];
 
@@ -114,12 +114,20 @@ int main() {
                 if (cantidad > 5)
                 {
                     printf("Acreedor al descuento del 10 por ciento \n");
-                    precio = precio * 0.9;
+                    descuento = precio * 0.90;
+                    venta = cantidad * descuento;
+                    stock -= cantidad;
+                    total_ganancias+=venta;
                 }
-                venta = cantidad * precio;
-                stock -= cantidad;
+                else
+                {
+                    descuento = precio;
+                    venta = cantidad * descuento;
+                    stock -= cantidad;
+                    total_ganancias+=venta;
+                }
+                printf("El total a pagar es: $%.2f\n", venta);
             }
-
             break;
 
         case 3:
@@ -175,7 +183,6 @@ int main() {
             }
             else
             {
-                total_ganancias+=venta;
                 printf("Total de ganancias: $%.2f\n", total_ganancias);
             }
             break;
