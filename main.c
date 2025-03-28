@@ -3,7 +3,7 @@
 
 int main() {
     int val;
-    int stock=0, cantidad, opcion;
+    int stock=-1, cantidad, opcion;
     float precio, total_ganancias = 0, venta=0;
     char nombre[30];
     char id[10];
@@ -54,8 +54,17 @@ int main() {
 
             do
             {
-                printf("Ingrese el precio unitario del producto: ");
-                scanf("%f", &precio);
+                do
+                {
+                    printf("Ingrese el precio unitario del producto: ");
+                    fflush(stdin);
+                    val = scanf("%f", &precio);
+                    if (val != 1)
+                    {
+                        printf("El valor es incorrecto..\n");
+                    }
+                } while (val != 1);
+
                 if (precio < 0)
                 {
                     printf("El precio unitario no puede ser negativo...\n");
@@ -66,7 +75,7 @@ int main() {
             break;
 
         case 2:
-            if (stock == 0)
+            if (stock == -1)
             {
                 printf("Primero debe registar el producto \n");
             }
@@ -76,8 +85,17 @@ int main() {
                 {
                     do
                     {
-                        printf("Ingrese la cantidad a vender: ");
-                        scanf("%d", &cantidad);
+                        do
+                        {
+                            printf("Ingrese la cantidad a vender: ");
+                            fflush(stdin);
+                            val = scanf("%d", &cantidad);
+                            if (val != 1)
+                            {
+                                printf("El valor es incorrecto..\n");
+                            }
+                        } while (val != 1);
+
                         if (cantidad < 1)
                         {
                             printf("La cantidad a vender no puede ser negativa...\n");
@@ -93,9 +111,10 @@ int main() {
                         printf("\n");
                     }
                 } while (cantidad > stock);
-                if(cantidad > 5){
+                if (cantidad > 5)
+                {
                     printf("Acreedor al descuento del 10 por ciento \n");
-                    precio=precio*0.9;
+                    precio = precio * 0.9;
                 }
                 venta = cantidad * precio;
                 stock -= cantidad;
@@ -104,7 +123,7 @@ int main() {
             break;
 
         case 3:
-            if (stock == 0)
+            if (stock == -1)
             {
                 printf("Primero debe registar el producto \n");
             }
@@ -112,8 +131,17 @@ int main() {
             {
                 do
                 {
-                    printf("Ingrese la cantidad a agregar al stock: ");
-                    scanf("%d", &cantidad);
+                    do
+                    {
+                        printf("Ingrese la cantidad a agregar al stock: ");
+                        fflush(stdin);
+                        val = scanf("%d", &cantidad);
+                        if (val != 1)
+                        {
+                            printf("El valor es incorrecto..\n");
+                        }
+                    } while (val != 1);
+
                     if (cantidad < 1)
                     {
                         printf("La cantidad digitada no puede ser negativa...\n");
@@ -126,7 +154,7 @@ int main() {
             break;
 
         case 4:
-            if (stock == 0)
+            if (stock == -1)
             {
                 printf("Primero debe registar el producto \n");
             }
@@ -141,7 +169,7 @@ int main() {
             break;
 
         case 5:
-            if (stock == 0)
+            if (stock == -1)
             {
                 printf("Primero debe registar el producto \n");
             }
